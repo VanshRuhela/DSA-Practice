@@ -20,26 +20,44 @@ class Graph {
     }
 
     int prim_mst() {
-
         // will use minheap - priority queue to store weight , and to which it is connected to
         // way to create min heap using priority queue
-        priority_queue <pair<int,int>, vector<pair<int,int>> , greater<pair<int, int> > > Q;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> Q;
 
         // MST set array - whether a node has been included in MST or not
         bool* visited = new bool[V]{0};
-        int ans=0;
+        int ans = 0;
 
         //begin
-        Q.push({0,0}); // weight, node comparison is made on first element of the pair
+        Q.push({0, 0});  // weight, node comparison is made on first element of the pair
 
-        while(!Q.empty()){
+        while (!Q.empty()) {
             //pick out the edge with min weight
-        }
-        
-    }
-}
+            auto best = Q.top();
+            Q.pop();
 
-int
+            int to = best.second;  // node to which it is directed
+            int weight = best.first;
+
+            if (visited[to])  // discrad it its not an active edge
+                continue;
+
+            // else take the current edge
+            ans += weight;
+            visited[to] = 1;
+
+            // add the new edges in the queue
+            for (auto x : l[to]) {
+                if(visited[x.first] == 0)
+                    Q.push({x.second, x.first});
+            }
+        }
+
+        return ans;
+    }
+};
+
+
 main() {
     return 0;
 }

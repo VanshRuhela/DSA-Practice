@@ -1,0 +1,1 @@
+{"name":"Local: try","url":"y:\\CP_lects\\Graph CB\\cycle\\try.cpp","tests":[{"id":1622740032952,"input":"5\n10101011011\n0000\n11111\n110\n1100","output":"YES\nYES\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"y:\\CP_lects\\Graph CB\\cycle\\try.cpp","group":"local","local":true}

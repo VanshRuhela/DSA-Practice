@@ -1,0 +1,1 @@
+{"name":"Local: pairingProb","url":"y:\\CP_lects\\Graph CB\\Code\\5. Disjoint Set Union\\pairingProb.cpp","tests":[{"id":1627144848788,"input":"5 3\n0 1\n1 4\n2 3","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"y:\\CP_lects\\Graph CB\\Code\\5. Disjoint Set Union\\pairingProb.cpp","group":"local","local":true}

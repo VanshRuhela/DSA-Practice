@@ -24,7 +24,7 @@ class DSU {
         return parent[i] = find(parent[i]);
     }
 
-    int unite(int x, int y) {
+    void unite(int x, int y) {
         int s1 = find(x);
         int s2 = find(y);
 

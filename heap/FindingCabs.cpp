@@ -1,6 +1,6 @@
 /*=============================================================================
-#  PROBLEM:          Given N caretsian POints in a @D plane each represents the location of the cab
-You are standing at orign you want to know the names of nearest k cars.
+#  PROBLEM:          Given N caretsian Points in a 2D plane each represents the location of the cab.
+                    You are standing at origin you want to know the names of nearest "k" cars.
 =============================================================================*/
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,13 +23,14 @@ class Car {
 class CarCompare{
     public:
     bool operator()(const Car a, const Car b){
-        return a.dist() < b.dist();  // greater than max heap sign
+        return a.dist() > b.dist();  // greater than max heap sign
     }
 };
 
 void NearestCars(vector<Car> cars, int k) {
      // creat a max heap of size K
-     priority_queue<Car, vector<Car>, CarCompare> max_heap(cars.begin(), cars.begin() + k); 
+     
+     priority_queue<Car, vector<Car>, CarCompare> max_heap(cars.begin(), cars.begin() + k); // oth car + kth 
 
     for(int i=k; i<cars.size(); i++){
         auto car = cars[i];

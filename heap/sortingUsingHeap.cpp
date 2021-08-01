@@ -29,7 +29,7 @@ int main() {
 
     // to cheate heap
     priority_queue<int, vector<int> , greater<int>> minheap;
-        //                             own comatator
+        //                             own comaptator
 
     priority_queue<int, vector<int> , Compare >> minheapCompare;
 

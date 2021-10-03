@@ -6,12 +6,27 @@ such that the base or perpendicular is parallel to the X or Y axis
 using namespace std;
 
 int countTriangles(vector<pair<int, int> > points) {
-    unordered_map<int, int> x; // value, count
+    map<int, int> x; // value, count
     unordered_map<int, int> y; // value, count
     for (auto point : points) {
         x[point.first]++;
         y[point.second]++;
     }
+
+
+    for(auto it = x.begin(); it!=x.end(); it++){
+        int key = it->first;
+        int freq = it->second;
+
+    }
+
+    vector<int> a {7,2,3,4};
+    for(auto i : a){
+        cout << i;
+    }
+
+
+
     int cnt = 0;
     for(auto point : points){
 
